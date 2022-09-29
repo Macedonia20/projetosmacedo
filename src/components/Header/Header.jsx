@@ -2,7 +2,7 @@ import { AppleLogo } from 'phosphor-react'
 
 import styles from './Header.module.css'
 
-import logoIgnate from '../assets/logoIgnate.svg'
+import logoIgnate from '../../assets/logoIgnate.svg'
 
 export function Header() {
     return (

@@ -2,9 +2,9 @@ import { PencilLine } from 'phosphor-react'
 
 import styles from './Sidebar.module.css'
 
-import imguser from '../assets/perfil.jpeg'
+import imguser from '../../assets/perfil.jpeg'
 
-import { Avatar } from './Avatar'
+import { Avatar } from '../Avatar/Avatar'
 
 export function Sidebar() {
     return (
