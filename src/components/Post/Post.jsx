@@ -32,9 +32,21 @@ export function Post({ author, publishedAt, content }) {
     function newCommentChenge() {
 
         setNewComment(event.target.value)
+        event.target.setCustomValidity('')
     }
 
+    function deleteComment(commentToDeletele) {
+       const commentsWithoutDeleteOne = comment.filter(comment => {
+        return comment != commentToDeletele
+       })
+       setCreateComment(commentsWithoutDeleteOne);
+    }
 
+    function handleNewCommentInvalid() {
+        event.target.setCustomValidity('É preciso fazer um comentario')
+    }
+
+    const isNewCommentEmpty = newComment.length === 0;
     
     return (
         <article className={styles.post}>
@@ -46,10 +58,13 @@ export function Post({ author, publishedAt, content }) {
                         <span>{author.role}</span>
                     </div>
                 </div>
-                <time title={publishedDateFormatted} dateTime={publishedAt.toISOString()}>
-                        {publishedDateRelativeToNow}
+                <time 
+                    title={publishedDateFormatted} 
+                    dateTime={publishedAt.toISOString()}
+                >
+                    {publishedDateRelativeToNow}
                         
-                    </time>
+                </time>
             </header>
 
             <div className={styles.content}>
@@ -71,9 +86,16 @@ export function Post({ author, publishedAt, content }) {
                  placeholder="Deixe um comentário..."
                  onChange={newCommentChenge}
                  value={newComment}
+                 onInvalid={handleNewCommentInvalid}
+                 required
                 />
                 <footer>
-                    <button type="submit">Publicar</button>
+                    <button 
+                     type="submit"
+                     disabled={isNewCommentEmpty}
+                    >
+                     Publicar
+                    </button>
                 </footer>
             </form>
 

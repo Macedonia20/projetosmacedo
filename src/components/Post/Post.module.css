@@ -20,12 +20,12 @@
 
 .content a {
     font-weight: bold;
-    color: var(--green-500);   
+    color: var(--purple-400);   
     text-decoration: none;
 }
 
 .content a:hover {
-    color: var(--green-300);
+    color: var(--purple-400);
 }
 
 .post > header {
@@ -91,7 +91,7 @@
     margin-top: 1rem;
     background-radius: 8px;
     border: 0;
-    background: var(--green-500);
+    background: var(--purple-400);
     color: var(--white);
     font-weight: bold;
     cursor: pointer;
@@ -102,13 +102,13 @@
 }
 
 .commentForm button[type=submit]:hover {
-    background: var(--green-300);
+    background: var(--purple-400);
 
 }
 
 
 .commentForm button {
-    background: var(--green-300);
+    background: var(--purple-400);
 }
 
 .commentForm footer {

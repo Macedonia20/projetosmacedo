@@ -8,9 +8,9 @@ export function Header() {
     return (
        
         <header className={styles.header}>
-           <img src={logoIgnate} alt="Logo Ignate" />
+           {/* <img src={logoIgnate} alt="Logo Ignate" /> */}
 
-           {/* <AppleLogo size={52}  style={{backgroundColor: 'green'}}/> */}
+           {/* <AppleLogo size={52}  style={{backgroundColor: 'purple'}}/> */}
         </header>
     );
 }
