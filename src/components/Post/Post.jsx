@@ -18,14 +18,23 @@ export function Post({ author, publishedAt, content }) {
         addSuffix: true,
     })
 
-    const [comment, setComment] = useState([1,2])
+    const [comment, setCreateComment] = useState(["Otimo sistema amigo"])
 
-    function newComment() {
+    const [newComment, setNewComment] = useState('')
+
+    function CreateNewComment() {
         event.preventDefault()
 
-        setComment([...comment, comment.length + 1])
-    
+        setCreateComment([...comment, newComment])
+        setNewComment('')
     }
+
+    function newCommentChenge() {
+
+        setNewComment(event.target.value)
+    }
+
+
     
     return (
         <article className={styles.post}>
@@ -46,18 +55,22 @@ export function Post({ author, publishedAt, content }) {
             <div className={styles.content}>
                 {content.map(line => {
                     if(line.type === 'paragraph') {
-                        return <p>{line.content}</p>;
+                        return <p key={line.content}>{line.content}</p>;
                     } else if (line.type === 'link') {
-                        return <p><a href="">{line.content}</a></p>
+                        return <p key={line.content}><a href="">{line.content}</a></p>
                     }
                 })}
 
            </div>
 
-            <form onSubmit={newComment} className={styles.commentForm}>
+            <form onSubmit={CreateNewComment} className={styles.commentForm}>
                 <strong>Deixe seu comentário</strong>
+
                 <textarea
-                  placeholder="Deixe um comentário..."
+                 name="comment"
+                 placeholder="Deixe um comentário..."
+                 onChange={newCommentChenge}
+                 value={newComment}
                 />
                 <footer>
                     <button type="submit">Publicar</button>
@@ -67,7 +80,11 @@ export function Post({ author, publishedAt, content }) {
             <div className={styles.commentList}>
                 {comment.map(comment => {
                     return (
-                        <Comment />
+                        <Comment 
+                            key={comment} 
+                            content={comment}
+                            deleteComment={deleteComment}
+                        />
                     )
                 })}
             </div>

@@ -4,7 +4,7 @@ import { Avatar } from '../Avatar/Avatar'
 import styles from './Comment.module.css'
 import imgProfile from '../../assets/ingrid.jpeg'
 
-export function Comment() {
+export function Comment(props) {
     return (
         <div className={styles.comment}>
             <Avatar EuEscolhoaPropiedade={false} src={imgProfile} />
@@ -21,7 +21,7 @@ export function Comment() {
                         </button>
                     </header>
 
-                    <p>Muito bom amor, parabéns!!</p>
+                    <p>{props.content}</p>
                 </div>
                 <footer>
                     <button>

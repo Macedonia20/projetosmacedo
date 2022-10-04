@@ -8,22 +8,24 @@ import './global.css'
 
 const posts = [
   {
-  author: {
-    avatar: 'https://github.com/macedonia20.png',
-    name: 'Matheus Macedo',
-    role: 'Developer fullStack'
-  },
+    id: 1,
+    author: {
+      avatar: 'https://github.com/macedonia20.png',
+      name: 'Matheus Macedo',
+      role: 'Developer fullStack'
+    },
   
 
-  content: [
-    {type: 'paragraph', content: 'Fala galeraa 👋'},
-    {type: 'paragraph', content: 'Acabei de subir mais um projeto. É um projeto que fiz para lista todos os outros projetos, cada publicação será um projeto meu!'},
-    {type: 'link', content: '@macedoo_matheus'}
-  ],
-  publishedAt: new Date('2022-05-30 21:00:00')
+    content: [
+      {type: 'paragraph', content: 'Fala galeraa 👋'},
+      {type: 'paragraph', content: 'Acabei de subir mais um projeto. É um projeto que fiz para lista todos os outros projetos, cada publicação será um projeto meu!'},
+      {type: 'link', content: '@macedoo_matheus'}
+    ],
+    publishedAt: new Date('2022-05-30 21:00:00')
   },
 
   {
+    id: 2,
     author: {
       avatar: 'https://avatars.githubusercontent.com/u/1562727?v=4',
       name: 'Rodrigo Barbosa',
@@ -56,6 +58,7 @@ export function App() {
              author={post.author}
              content={post.content}
              publishedAt={post.publishedAt}
+             key={post.id}
             />
           )
          })}
