@@ -18,7 +18,7 @@ export function Post({ author, publishedAt, content }) {
         addSuffix: true,
     })
 
-    const [comment, setCreateComment] = useState(["Otimo sistema amigo"])
+    const [comment, setCreateComment] = useState(["Muito bom parabéns"])
 
     const [newComment, setNewComment] = useState('')
 
@@ -69,13 +69,15 @@ export function Post({ author, publishedAt, content }) {
 
             <div className={styles.content}>
                 {content.map(line => {
+                    console.log(content)
                     if(line.type === 'paragraph') {
                         return <p key={line.content}>{line.content}</p>;
-                    } else if (line.type === 'link') {
-                        return <p key={line.content}><a href="">{line.content}</a></p>
+                    } else if (line.type === 'photo') {
+                        return <img key={line.content} src={line.content} />
+                    }else if (line.type === 'link') {
+                        return <p key={line.content}><a target="blank" href={line.content}>{line.content}</a></p>
                     }
                 })}
-
            </div>
 
             <form onSubmit={CreateNewComment} className={styles.commentForm}>

@@ -6,6 +6,7 @@
     background: var(--gray-800);
     border-radius: 8px;
     padding:2.5rem;
+    overflow-y: scroll;  
 }
 
 .content {
@@ -26,6 +27,15 @@
 
 .content a:hover {
     color: var(--purple-400);
+}
+
+.content img {
+    margin-top: 1rem;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 8px;
+    padding: 0.2rem;
+    object-fit: cover;
 }
 
 .post > header {

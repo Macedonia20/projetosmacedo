@@ -1,4 +1,4 @@
-import { PencilLine } from 'phosphor-react'
+import { GithubLogo } from 'phosphor-react'
 
 import styles from './Sidebar.module.css'
 
@@ -21,12 +21,31 @@ export function Sidebar() {
                     
                 <span>Web developer</span>
             </div>
+            <br />
+            <div className={styles.descrition}>
+                <h4>Sobre mim:</h4>
+
+                <p>
+                    Tenho 22 anos, moro na cidade de Santo andré, comecei a programar em 2021 e 
+                    desde então tenho tido a certeza que me encaixo  nesse área e que quero 
+                    continuar me desenvolvendo nesse universo da programação. <br/>
+                    Esse é o meu portifolio com alguns projetos que criei do zero e alguns que fiz parte,
+                    espero que goste! 
+                
+                </p>
+            </div>
             <footer >
-                <a href='#'>
-                    <PencilLine size={20} />
-                    Editar perfil
+                <a href='https://github.com/Macedonia20' target="blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" size={32} />
+                    Ver perfil
+                </a>
+                <br />
+                <a href='https://www.linkedin.com/in/matheus-macedo-15b60821b/' target="blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" size={32} />
+                    Ver perfil
                 </a>
             </footer>
+            
         </aside>
     )
 }

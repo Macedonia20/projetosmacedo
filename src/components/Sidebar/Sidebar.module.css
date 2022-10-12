@@ -1,8 +1,7 @@
 .sidebar {
     background: var(--gray-800);
     border-radius: 8px;
-    overflow: hidden;
-}
+ }
 
 .cover {
     width: 100%;
@@ -40,6 +39,12 @@
     justify-content: center;
 }
 
+.sidebar footer img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
 .photo{
     width: calc(3rem + 12px);
     height: calc(3rem + 12px);
@@ -68,4 +73,27 @@
 .sidebar footer a:hover {
     background: var(--purple-400);
     color: var(--gray-500);
+}
+
+.descrition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(0px - 1rem - 6px)
+}
+
+.descrition h4 {
+    margin-top: 1rem;
+    color: var(--gray-100);
+    line-height: 1.6;  
+    margin-right: 0.5rem;
+}
+
+.descrition p {
+    font-size:0.75rem;
+    color: var(--gray-100);
+    line-height: 1.6;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+
 }
