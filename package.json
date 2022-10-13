@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "aws s3 sync dist/ s3://meuportifolio --acl public-read"
+
   },
   "dependencies": {
     "date-fns": "^2.29.3",
