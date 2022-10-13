@@ -1,6 +1,8 @@
 .sidebar {
     background: var(--gray-800);
-    border-radius: 8px;
+    border-radius: 10px;
+    position: fixed;
+    width: 20%;
  }
 
 .cover {

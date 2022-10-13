@@ -6,7 +6,7 @@
     background: var(--gray-800);
     border-radius: 8px;
     padding:2.5rem;
-    overflow-y: scroll;  
+    overflow-y: scroll;
 }
 
 .content {

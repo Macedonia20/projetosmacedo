@@ -3,6 +3,11 @@
   display: flex;
   justify-content: center;
   padding: 1.25rem 0;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .header img {
