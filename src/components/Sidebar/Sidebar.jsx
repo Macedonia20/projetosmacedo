@@ -28,7 +28,7 @@ export function Sidebar() {
                 <p>
                     Sou desenvolvedor Full Stack, tenho 22 anos, moro na cidade de Santo André,
                     comecei a programar em 2021 e desde então tenho tido a certeza que me encaixo 
-                    nesse área e que quero continuar me desenvolvendo nesse universo da programação. 
+                    nessa área e que quero continuar me desenvolvendo nesse universo da programação. 
                     Trabalhei em algumas aplicações com grande tráfego (5 mil de visitas diárias) e que 
                     chegou a 60 países. Possuo sólidos conhecimentos em programação funcional, OOP, JavaScript 
                     (Reactjs e Nodejs), banco de dados (Mysql Workbench). Tenho interesse em escalabilidade 
